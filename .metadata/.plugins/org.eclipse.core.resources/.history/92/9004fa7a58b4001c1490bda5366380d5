@@ -1,0 +1,5 @@
+package Persistencia.Usuarios;
+
+public interface IPersistenciaUsuarios {
+
+}

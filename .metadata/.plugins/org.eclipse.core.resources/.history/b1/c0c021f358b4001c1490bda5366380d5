@@ -1,0 +1,11 @@
+package Persistencia.Usuarios;
+
+import java.util.List;
+
+import Negocio.Usuarios;
+
+public interface IPersistenciaUsuarios {
+
+	public void SaveAgenda(Usuarios usuario);
+	public List<Usuarios> GetUsuarios();
+}

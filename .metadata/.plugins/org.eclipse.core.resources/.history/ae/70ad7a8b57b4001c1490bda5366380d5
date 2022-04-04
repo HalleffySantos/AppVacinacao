@@ -1,0 +1,31 @@
+package Persistencia.Usuarios;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import Negocio.Usuarios;
+
+public class PersistenciaUsuarios {
+
+	public void SaveUsuario(Usuarios usuario)
+	{
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		session.save(usuario);
+		session.getTransaction().commit();
+	}
+	
+	public List<Agendas> GetVacinas()
+	{
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		return (List<Agendas>)session.createSQLQuery("SELECT * FROM AGENDAS").addEntity(Agendas.class).list();
+	}
+	
+}

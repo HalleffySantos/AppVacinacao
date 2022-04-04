@@ -1,0 +1,11 @@
+package Persistencia.Alergias;
+
+import java.util.List;
+
+import Negocio.Agendas;
+
+public interface IPersistenciaAlergias {
+
+	public void SaveAlergias(Alergias alergia);
+	public List<Alergias> GetAlergias();
+}

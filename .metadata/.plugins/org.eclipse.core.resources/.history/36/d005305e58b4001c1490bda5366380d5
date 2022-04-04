@@ -1,0 +1,5 @@
+package Persistencia.Alergias;
+
+public interface IPersistenciaAlergias {
+
+}

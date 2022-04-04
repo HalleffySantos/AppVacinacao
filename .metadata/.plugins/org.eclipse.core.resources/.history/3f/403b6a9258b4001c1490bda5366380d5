@@ -1,0 +1,11 @@
+package Persistencia.Vacinacao;
+
+import java.util.List;
+
+import Negocio.Vacinas;
+
+public interface IPersistenciaUsuarios {
+
+	public void SaveAgenda(Usuarios usuario);
+	public List<Usuarios> GetUsuarios();
+}

@@ -1,0 +1,15 @@
+package Persistencia.Vacinacao;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import Negocio.Vacinas;
+
+public class PersistenciaVacinas {
+
+	public void SaveVacina(Vacinas vacina)
+	{
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+	}
+	
+}

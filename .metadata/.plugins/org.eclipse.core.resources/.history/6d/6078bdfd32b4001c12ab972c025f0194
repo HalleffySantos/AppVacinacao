@@ -1,0 +1,45 @@
+package Negocio;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) throws ParseException {
+		
+		//Vacinas
+		Scanner scanner = new Scanner(System.in);
+		var vacTitulo = scanner.nextLine();
+		var vacDescricao = scanner.nextLine();;
+		var vacDoses = scanner.nextInt();
+		var vacPeriodicidade = scanner.nextInt();
+		var vacIntervalo = scanner.nextInt();
+		
+		System.out.println(vacTitulo + " " + vacDescricao + " " + vacDoses + " " + vacPeriodicidade + " " + vacIntervalo);
+		
+		var vacina = new Vacinas(vacTitulo, vacDescricao, vacDoses, vacPeriodicidade, vacIntervalo, new ArrayList<Agendas>());
+	
+		//Agendas
+		String aux = scanner.nextLine();
+		Date agdData = LocalDate.parse(aux);
+		
+		String hora = scanner.nextLine();
+		String situacao = scanner.nextLine();
+		
+		aux = scanner.nextLine();
+		Date dataSituacao = new SimpleDateFormat("dd/MM/yyyy").parse(aux);
+		
+		String observacoes = scanner.nextLine();
+		
+		var agenda = new Agendas(agdData, hora, situacao, dataSituacao, observacoes, vacina);
+		vacina.addAgenda(agenda);
+		
+		System.out.println("ok");
+	}
+
+}

@@ -1,0 +1,21 @@
+package Negocio;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		//Vacinas
+		Scanner scanner = new Scanner(System.in);
+		var vacTitulo = scanner.nextLine();
+		var vacDescricao = scanner.nextLine();
+		var vacDoses = scanner.nextInt();
+		var vacPeriodicidade = scanner.nextInt();
+		var vacIntervalo = scanner.nextInt();
+		
+		var vacina = new Vacinas(vacTitulo, vacDescricao, vacDoses, vacPeriodicidade, vacIntervalo, new List<Agendas>());
+	}
+
+}

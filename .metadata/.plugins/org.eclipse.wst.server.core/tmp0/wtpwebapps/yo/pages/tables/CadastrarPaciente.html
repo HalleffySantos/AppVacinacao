@@ -241,14 +241,14 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nome</label>
                     <div class="col-md-6">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome do Paciente">
+                    <input type="text" class="form-control" id="inputNome" placeholder="Nome do Paciente">
                     </div>
                   </div>
                   
                   <div class="form-group">
                     <label>Data de Nascimento</label>
                       <div class="input-group date col-md-2" id="reservationdate" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                          <input id = "inputDataNascimento"type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
                           <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                           </div>
@@ -271,7 +271,7 @@
                     <div class="col-12">
                       <div class="form-group">
                         <label>Alergias</label>
-                        <select class="duallistbox" multiple="multiple">
+                        <select id = "inputAlergias"class="duallistbox" multiple="multiple">
                           <option selected>Alabama</option>
                           <option>Alaska</option>
                           <option>California</option>
@@ -291,7 +291,7 @@
                     <!-- textarea -->
                     <div class="form-group">
                       <label>Logradouro</label>
-                      <textarea class="form-control" rows="2" placeholder="Endereço..."></textarea>
+                      <textarea id = "inputLogradouro" class="form-control" rows="2" placeholder="Endereço..."></textarea>
                     </div>
                   </div>
                   
@@ -299,21 +299,21 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Número</label>
                     <div class="col-md-1">
-                    <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Nº">
+                    <input id = "inputNumero" type="number" class="form-control" id="exampleInputEmail1" placeholder="Nº">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Setor</label>
                     <div class="col-md-3">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Setor">
+                    <input id = "inputSetor" type="text" class="form-control" id="exampleInputEmail1" placeholder="Setor">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Cidade</label>
                     <div class="col-md-3">
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cidade">
+                    <input id = "inputCidade" type="text" class="form-control" id="exampleInputEmail1" placeholder="Cidade">
                     </div>
                   </div>
                   
@@ -321,7 +321,7 @@
                   <div class="form-group">
                     <label>UF</label>
                     <div class="col-md-2">
-                      <select class="form-control">
+                      <select id = "inputUf" class="form-control">
                         <option>Selecione...</option>
                                         <option value="AC">AC</option>
                                         <option value="AL">AL</option>
@@ -363,7 +363,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
+                  <button onclick = "CadastrarUsuario()" type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
                 </div>
               </form>
             </div>

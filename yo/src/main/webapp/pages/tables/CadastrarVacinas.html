@@ -215,7 +215,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Título</label>
                         <div class="col-md-6">
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite um Título">
+                        <input id = "inputNome" type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite um Título">
                       </div>
                     </div>
 
@@ -223,20 +223,20 @@
                       <!-- textarea -->
                       <div class="form-group">
                         <label>Descrição</label>
-                        <textarea class="form-control" rows="10" placeholder="Desrição da Vacina"></textarea>
+                        <textarea id = "inputDescricao" class="form-control" rows="10" placeholder="Desrição da Vacina"></textarea>
                       </div>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">Doses</label>
                       <div class="col-sm-1">
-                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Nº">
+                      <input id = "inputDoses" type="number" class="form-control" id="exampleInputEmail1" placeholder="Nº">
                     </div>
 
                     <div class="form-group">
                       <label>Periodicidade</label>
                       <div class="col-md-2">
-                        <select class="form-control">
+                        <select id = "Periodicidade" class="form-control">
                           <option>Dia</option>
                           <option>Semanas</option>  
                           <option>Meses</option>
@@ -248,7 +248,7 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">Intervalo</label>
                       <div class="col-md-2">
-                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Intervalo de Doses">
+                      <input id = "inputIntervalo" type="number" class="form-control" id="exampleInputEmail1" placeholder="Intervalo de Doses">
                     </div>
                                       
                   
@@ -256,7 +256,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
+                  <button onclick = "CadastrarVacinas()" type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
                 </div>
               </form>
             </div>

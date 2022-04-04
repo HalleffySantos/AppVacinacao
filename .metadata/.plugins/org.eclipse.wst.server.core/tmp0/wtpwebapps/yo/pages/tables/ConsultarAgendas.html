@@ -215,7 +215,7 @@
                   <div class="form-group">
                     <label>Situação</label>
                     <div class="col-md-2">
-                      <select class="form-control">
+                      <select id = "inputSituacao" class="form-control">
                         <option>Selecione...</option>
                         <option>Cancelada</option>  
                         <option>Realizada</option>
@@ -229,7 +229,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-search"></i> Buscar</button>
+                  <button onclick = "ConsultarAgendas()" type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-search"></i> Buscar</button>
                 </div>
               </form>
             </div>
@@ -256,10 +256,10 @@
                     <th>Paciente</th>
                     <th>Situação</th>
                     <th>Data Situação</th> 
-                    <th>Ações</th>
+                    <th>Vacina</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody id = "tabela">
                   <tr>
                     <td>12/03/2022</td>
                     <td>Marcos Ferreira</td>
@@ -287,7 +287,7 @@
                     <th>Paciente</th>
                     <th>Situação</th>
                     <th>Data Situação</th> 
-                    <th>Ações</th>   
+                    <th>Vacina</th>   
                   </tr>
                   </tfoot>
                 </table>

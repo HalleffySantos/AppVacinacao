@@ -241,7 +241,7 @@
                   <div class="form-group">
                     <label>Data/Hora</label>
                       <div class="input-group date col-md-3" id="reservationdatetime" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime"/>
+                          <input id = "inputData" type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime"/>
                           <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                           </div>
@@ -251,7 +251,7 @@
                   <div class="form-group">
                     <label>Situação</label>
                     <div class="col-md-2">
-                      <select class="form-control">
+                      <select class="form-control" id = "inputSituacao">
                         <option>Selecione...</option>
                         <option>Realizadas</option>  
                         <option>Canceladas</option>
@@ -263,7 +263,7 @@
                   <div class="form-group">
                     <label>Data da Situação</label>
                       <div class="input-group date col-md-2" id="reservationdate" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                          <input id = "inputDataSituacao" type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
                           <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                           </div>
@@ -274,19 +274,15 @@
                     <!-- textarea -->
                     <div class="form-group">
                       <label>Observações</label>
-                      <textarea class="form-control" rows="10" placeholder="Observações..."></textarea>
+                      <textarea id = "inputObservacoes" class="form-control" rows="10" placeholder="Observações..."></textarea>
                     </div>
                   </div>
-                    
-                    
-                    
-                                      
-                  
+
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
+                  <button onclick = "CadastrarAgenda()" type="button" class="btn btn-primary swalDefaultSuccess"><i class="fa fa-plus"></i> Adicionar</button>
                 </div>
               </form>
             </div>
